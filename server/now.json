@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "name": "travel-app",
+  "builds": [
+    {
+      "src": "src/index.js",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "src/index.js"
+    }
+  ],
+  "alias": [
+    "travel-tracker"
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "PORT": "1337",
+    "DATABASE_URL": "@travel-app",
+    "CORS_ORIGIN": "https://travel-track.vercel.app",
+    "API_KEY": "@travel-app-api-key"
+  }
+}
